@@ -28,6 +28,7 @@ We plan to break the project down into the following components:
 ## Roles & Division of Work
 Sol - Most of the ML modeling part of the code as well as the writeup of summary of findings and
 limitations sections.
+
 Jinghan - Most of the data exploration & visualization as well as the writeup of the introduction and areas
 for further research
 
