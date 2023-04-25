@@ -30,5 +30,5 @@ Sol - Most of the ML modeling part of the code as well as the writeup of summary
 limitations sections.
 
 Jinghan - Most of the data exploration & visualization as well as the writeup of the introduction and areas
-for further research
+for further research.
 
