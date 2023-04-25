@@ -76,6 +76,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+.ipynb_checkpoints
 
 # IPython
 profile_default/
@@ -129,8 +130,5 @@ dmypy.json
 .pyre/
 
 .DS_Store
-<<<<<<< HEAD
 .virtual_documents/
-=======
-.virtual_documents/
->>>>>>> dbcfa2a238484aa6f3cd6f7a27d9fe2208e3b513
+
