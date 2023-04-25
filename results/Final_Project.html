@@ -15275,7 +15275,7 @@ Sol Lee (48760516, Section 003)</p>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Dataset">Dataset<a class="anchor-link" href="#Dataset">&#182;</a></h1><p>For the project, we are using Hotel Reservations dataset from Kaggle, which is available at <a href="https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset">https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset</a>. This dataset contains information about the hotel's reservations, such as room type booked and number of guests in the reservation, and its booking status (whether the reservation was cancelled or not) as shown below.</p>
+<h1 id="Dataset">Dataset<a class="anchor-link" href="#Dataset">&#182;</a></h1><p>For the project, we are using Hotel Reservations dataset from Kaggle, which is available at <a href="https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset">https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset</a>. This dataset contains information about the hotel's reservations, such as room type booked and number of guests in the reservation, and its booking status (whether the reservation was canceled or not) as shown below.</p>
 
 </div>
 </div>
@@ -16524,7 +16524,7 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Above, we explore the relationship between booking status and lead time, defined as number of days between the date of booking and  arrival date. The histogram shows that most bookings are recorded within 120 days from the check in date, while there are few people choose to make a reservation more than one year in advance.</p>
-<p>It is intuitive and notable from the graph above that higher proportion of bookings are confirmed rather than cancelled closer to check-in date. For instance, if the lead time is more than 5 months (150 days), the proportion of booking cancellation exceeds booking confirmation.</p>
+<p>It is intuitive and notable from the graph above that higher proportion of bookings are confirmed rather than canceled closer to check-in date. For instance, if the lead time is more than 5 months (150 days), the proportion of booking cancellation exceeds booking confirmation.</p>
 
 </div>
 </div>
@@ -17112,7 +17112,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The pie plot tells approximately 64% of the booking were made online and 29% were made offline. Besides these two most common types of reservation, there are less than 10% of bookings in other categories: corporate, complementary and aviation. It is notable that all 391 records of booking froms the complementary section are confirmed (not canceled) and it is the only section that doesn't contain any canceled records. Moreover, in the corporate sector the number of booking confirmation is 8 times that of the cancelled bookings, which is much higher than the average. In the rest of the 4 sections, the number of confirmations is approximately twice than that of the reservation, which is consistent with the general cancellation pattern across sectors.</p>
+<p>The pie plot tells approximately 64% of the booking were made online and 29% were made offline. Besides these two most common types of reservation, there are less than 10% of bookings in other categories: corporate, complementary and aviation. It is notable that all 391 records of booking froms the complementary section are confirmed (not canceled) and it is the only section that doesn't contain any canceled records. Moreover, in the corporate sector the number of booking confirmation is 8 times that of the canceled bookings, which is much higher than the average. In the rest of the 4 sections, the number of confirmations is approximately twice than that of the reservation, which is consistent with the general cancellation pattern across sectors.</p>
 
 </div>
 </div>
@@ -18842,13 +18842,27 @@ class="
 </div>
 
 </div>
+<div id="cell-id=3398a086-1034-4cd5-ab16-8d6b8aac0db0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Fig. 5.1 Force plot 1</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
 <div id="cell-id=3804ac23-ed60-417d-829f-f71d30d8ea46" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In the first example data point above, we see that our raw model score of 0.28 is below the base value. This means that our model predicts that the reservation will be <strong>confirmed</strong>, rather than canceled. We observe that the most influential feature driving this decision is<code>lead_time</code> which pushes the decision closer to &quot;confirmed&quot; status, while the second most influential feature <code>avg_price_per_room</code> is pushing the decision up to &quot;cancelled&quot; status. Ultimately these conflicting forces combined leads to the final prediction being <strong>confirmed</strong>. We see that the three most infleuntial factors driving this decision <code>lead_time</code>, <code>avg_price_per_room</code> and <code>nights_ttl</code> correspond to the top three most important features as shown in Variable Selection section.</p>
+<p>In the first example data point above, we see that our raw model score of 0.28 is below the base value. This means that our model predicts that the reservation will be <strong>not canceled</strong>, rather than canceled. We observe that the most influential feature driving this decision is<code>lead_time</code> which pushes the decision closer to &quot;confirmed&quot; status, while the second most influential feature <code>avg_price_per_room</code> is pushing the decision up to &quot;canceled&quot; status. Ultimately these conflicting forces combined leads to the final prediction being <strong>not canceled</strong>. We see that the three most influential factors driving this decision <code>lead_time</code>, <code>avg_price_per_room</code> and <code>nights_ttl</code> correspond to the top three most important features as shown in Variable Selection section.</p>
 
 </div>
 </div>
@@ -18901,13 +18915,27 @@ class="
 </div>
 
 </div>
+<div id="cell-id=4efaf9f1-b9fe-492e-b1b5-10eb2914eeea" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Fig. 5.2 Force plot 2</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
 <div id="cell-id=b42f1746-1e25-4adf-9c2c-95b840b696b0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>For the second reservation data point, we observe an extremely small SHAP value of 0.02 which is below the base value. This tells us that our model predicts that the reservation will be <strong>confirmed</strong>, rather than canceled. It is interesting to observe that, again, the most influential factors driving this decision <code>lead_time</code>, <code>avg_price_per_room</code> and <code>nights_ttl</code> correspond to the top three most important features as shown in Variable Selection section.</p>
+<p>For the second reservation data point, we observe an extremely small SHAP value of 0.02 which is below the base value. This tells us that our model predicts that the reservation will be <strong>not canceled</strong>, rather than canceled. It is interesting to observe that, again, the most influential factors driving this decision <code>lead_time</code>, <code>avg_price_per_room</code> and <code>nights_ttl</code> correspond to the top three most important features as shown in Variable Selection section.</p>
 
 </div>
 </div>
@@ -18960,13 +18988,27 @@ class="
 </div>
 
 </div>
+<div id="cell-id=c3114ce7-ed75-4e6e-a8e0-86138573b842" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<ul>
+<li>Fig. 5.3 Force plot 3</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
 <div id="cell-id=1e942a17-1677-40c4-b256-4a519df9f378" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Here we observe an example for a reservation that the model predicts will be <strong>cancelled</strong>, since our raw model score of 0.78 is above the base value. It is clear that the most influential factor driving this decision is the high average room price. While low lead time pushes the SHAP value to be lower, meaning it makes it less likely for the reservation to be cancelled, the average room price and combination of other factors including room type, presence of children, and total nights pushes the decision closer to &quot;canceled&quot; booking status.</p>
+<p>Here we observe an example for a reservation that the model predicts will be <strong>canceled</strong>, since our raw model score of 0.78 is above the base value. It is clear that the most influential factor driving this decision is the high average room price. While low lead time pushes the SHAP value to be lower, meaning it makes it less likely for the reservation to be canceled, the average room price and combination of other factors including room type, presence of children, and total nights pushes the decision closer to &quot;canceled&quot; booking status.</p>
 
 </div>
 </div>
@@ -19000,9 +19042,9 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Using the random forest classifier model, we found that <code>lead_time</code>, <code>avg_price_per_room</code> and <code>nights_ttl</code> are the top three factors affecting hotel booking status. All three of these factors had positive coefficients, meaning they were all positively correlated to cancellation status: as lead time, average room price, and total number of nights reserved increased, so did likelihood for the reservation to be cancelled.</p>
-<p>Lead time is the number of days between the date of booking and arrival date. Our results show that higher lead time results in higher likelihood for cancellation. Since hotels disallow or penalize cancellation within a certain time period before the arrival date, and since trips may be more uncertain and tentative the further away it is from the trip, this result seems to be intuitive. Secondly, the positive coefficient for average price per room indicates that guests that reserved more expensive rooms are more likely to cancel their reservations. Lastly, we observed that the more nights the reservation was booked for, the more likely it was for the reservation to be cancelled. Since longer reservations are more commitment for the guests, it may be making it more likely for the guests to cancel.</p>
-<p>To supplement the above results from the random forest model, we also examined our second best performing model, logistic regression, and found that the variables with the highest magnitude coefficients were <code>repeated_guest</code>, <code>complementary</code>, and <code>required_car_parking_space</code>, all of which had negative coefficients. Given that these were all binary variables following our preprocessing step, it indicated that when the reservation was made by a repeat guest, reservation was complementary, or when the guest required parking space, the likelihood of the reservation being cancelled decreased. It is intuitive that when a guest is a repeat guest, they may have more loyalty to the hotel than another guest who may not have been to the property before. Additionally, the fact that the guest is returning to the hotel could imply they enjoyed their stay previously and is thus less likely to cancel their reservation. It is also intuitive that a complementary room would more likely result in confirmation rather than cancellation since the room was free of charge and may be reserved for special circumstances.</p>
+<p>Using the random forest classifier model, we found that <code>lead_time</code>, <code>avg_price_per_room</code> and <code>nights_ttl</code> are the top three factors affecting hotel booking status. All three of these factors had positive coefficients, meaning they were all positively correlated to cancellation status: as lead time, average room price, and total number of nights reserved increased, so did likelihood for the reservation to be canceled.</p>
+<p>Lead time is the number of days between the date of booking and arrival date. Our results show that higher lead time results in higher likelihood for cancellation. Since hotels disallow or penalize cancellation within a certain time period before the arrival date, and since trips may be more uncertain and tentative the further away it is from the trip, this result seems to be intuitive. Secondly, the positive coefficient for average price per room indicates that guests that reserved more expensive rooms are more likely to cancel their reservations. Lastly, we observed that the more nights the reservation was booked for, the more likely it was for the reservation to be canceled. Since longer reservations are more commitment for the guests, it may be making it more likely for the guests to cancel.</p>
+<p>To supplement the above results from the random forest model, we also examined our second best performing model, logistic regression, and found that the variables with the highest magnitude coefficients were <code>repeated_guest</code>, <code>complementary</code>, and <code>required_car_parking_space</code>, all of which had negative coefficients. Given that these were all binary variables following our preprocessing step, it indicated that when the reservation was made by a repeat guest, reservation was complementary, or when the guest required parking space, the likelihood of the reservation being canceled decreased. It is intuitive that when a guest is a repeat guest, they may have more loyalty to the hotel than another guest who may not have been to the property before. Additionally, the fact that the guest is returning to the hotel could imply they enjoyed their stay previously and is thus less likely to cancel their reservation. It is also intuitive that a complementary room would more likely result in confirmation rather than cancellation since the room was free of charge and may be reserved for special circumstances.</p>
 
 </div>
 </div>
@@ -19026,7 +19068,7 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>With the above results in mind, we have formulated some specific policies that the hotel could implement to mitigate the negative business impacts caused by cancellations. Firstly, considering that both high room prices and lead times makes cancellations more likely, the hotel could offer discounts to guests that book earlier (e.g. at least 2 months prior to their arrival date). Since this lowers average room prices of earlier reservations, it would help offset the impact that lead time, the most influential feature in our model.</p>
-<p>Secondly, considering that higher number of nights stay increases the chance of reservations being cancelled, the hotel may apply some penalty fee for canceling reservations that are more than a certain number of days. For instance, for reservations made that are 5 days or more, the hotel may make free cancellation ineligible and apply a small penalty fee for cancelling the reservation. This will incentivize the guests to make thoughtful reservation decisions for longer stays and thus help reservations that are longer not take up the availability of the rooms for other guests.</p>
+<p>Secondly, considering that higher number of nights stay increases the chance of reservations being canceled, the hotel may apply some penalty fee for canceling reservations that are more than a certain number of days. For instance, for reservations made that are 5 days or more, the hotel may make free cancellation ineligible and apply a small penalty fee for canceling the reservation. This will incentivize the guests to make thoughtful reservation decisions for longer stays and thus help reservations that are longer not take up the availability of the rooms for other guests.</p>
 <p>Lastly, we observed that it is less likely for guests who have previously stayed at the hotel before to cancel their reservations. This in turn means that guest who have never stayed at the hotel are more likely to cancel. Therefore, the hotel could run a special promotion for first-time guests by offering them a discount on their room or dining experience at the hotel to incentivize their stays and thus increase confirmation rates.</p>
 
 </div>
@@ -19050,7 +19092,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>At the start of our analysis, we dropped the time factors and placed our analysis to a relatively stage, so that we can focus on the relation among non-fluent factors. However, in the real life business seriernio, the time and season of these reservations can significantly affect the analysis. Future studies may explore and build ML models that include time variables into account and apply some strong methods in economic research such as difference-in-difference technique. Taking time variable into account such as classifying each time period as any corresponding events, such as holidays, the outbreak of the COVID-19, shocks in economy etc., will make the analysis may more robust and helpful to the hotel business, as the hotels can not only conduct its promotions differently depending on the season or time or year but also exclude the time effect to find more preciously analyze their target customers.</p>
+<p>At the start of our analysis, we dropped the time factors and placed our analysis to a relatively stage, so that we can focus on the relation among non-fluent factors. However, in the real life business scenario, the time and season of these reservations can significantly affect the analysis. Future studies may explore and build ML models that include time variables into account and apply some strong methods in economic research such as difference-in-difference technique. Taking time variable into account such as classifying each time period as any corresponding events, such as holidays, the outbreak of the COVID-19, shocks in economy etc., will make the analysis may more robust and helpful to the hotel business, as the hotels can not only conduct its promotions differently depending on the season or time or year but also exclude the time effect to find more preciously analyze their target customers.</p>
 
 </div>
 </div>
