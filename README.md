@@ -3,10 +3,9 @@
 **By Jinghan Xu and Sol Lee**
 
 ## Topic: Factors affecting hotel room booking status
-Dataset: https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset
 
 ## Background
-For our final project, we plan on using the Hotel Reservations Classification Dataset from Kaggle to
+For our  project, we use the [Hotel Reservations Classification Dataset from Kaggle](https://www.kaggle.com/datasets/ahsan81/hotel-reservations-classification-dataset) to
 explore which factors, such as room type, room price, number of guests, affect hotel room booking status
 and predict customer’s likelihood to cancel by using a machine learning model. Our target variable is
 “Booking status”, which is binary with values “Canceled” vs. “Not canceled”.
